@@ -27,3 +27,8 @@ header {
   background-image: url(./img/rocket.svg);
   background-size: contain;
 }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
