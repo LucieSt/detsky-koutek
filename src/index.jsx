@@ -6,6 +6,7 @@ import About from './pages/About/about';
 import Home from './pages/Home/home';
 import ErrorPage from './pages/ErrorPage/error-page';
 import CentersPage from './pages/CentersPage/centers-page';
+import CenterDetail from './pages/CenterDetail/center-detail';
 import './style.css';
 
 const App = () => {
@@ -47,7 +48,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/centers",
-        element: <CentersPage />
+        element: <CentersPage />,
+        children: [
+          {
+            path: "/centers/:id",
+            element: <CenterDetail />
+          }
+        ]
       },
     ],
   },
